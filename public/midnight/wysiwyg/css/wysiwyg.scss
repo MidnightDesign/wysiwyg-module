@@ -1,0 +1,23 @@
+.wysiwyg {
+    transition: 1s;
+    &.dirty {
+        background-color: rgba(255, 255, 0, .05);
+        transition: none;
+    }
+    &.saving {
+        opacity: .5;
+        transition: none;
+    }
+    &.saved {
+        background-color: rgba(0, 255, 0, .1);
+        transition: none;
+    }
+}
+.cke_button__midnightsave {
+    .cke_button__midnightsave_icon {
+        display: none;
+    }
+    .cke_button__midnightsave_label {
+        display: inline;
+    }
+}
