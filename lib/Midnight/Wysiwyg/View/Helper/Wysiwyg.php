@@ -13,6 +13,11 @@ class Wysiwyg extends AbstractHelper
 
     function __invoke($text, $save_url, array $options = [])
     {
+        if (isset($options['condition'])) {
+            if (!$options['condition'] === true) {
+                return $text;
+            }
+        }
         $options = $options + self::$defaultOptions;
         if (!$text) {
             $text = '<p></p>';
