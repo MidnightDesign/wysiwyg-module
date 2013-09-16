@@ -13,8 +13,8 @@ class Wysiwyg extends AbstractHelper
 
     function __invoke($text, $save_url, array $options = [])
     {
-        if(isset($options['condition'])) {
-            if($options['condition'] !== true) {
+        if (isset($options['condition'])) {
+            if (!$options['condition'] === true) {
                 return $text;
             }
         }
