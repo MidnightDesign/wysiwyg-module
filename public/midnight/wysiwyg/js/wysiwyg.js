@@ -30,7 +30,28 @@ $(function () {
                 ['Image'],
                 ['MidnightSave']
             ],
-            stylesSet: 'default'
+            stylesSet: 'default',
+            allowedContent: {
+                a: {
+                    attributes: 'href'
+                },
+                b: true,
+                h1: true,
+                h2: true,
+                h3: true,
+                h4: true,
+                h5: true,
+                h6: true,
+                i: true,
+                img: {
+                    attributes: 'src, alt',
+                    classes: 'float, block'
+                },
+                li: true,
+                ol: true,
+                p: true,
+                ul: true
+            }
         });
     });
 });
