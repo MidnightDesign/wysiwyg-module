@@ -28,6 +28,7 @@ $(function () {
                 ['Link', 'Unlink'],
                 ['BulletedList', 'NumberedList'],
                 ['Image'],
+                ['Undo', 'Redo'],
                 ['MidnightSave']
             ],
             stylesSet: 'default',
