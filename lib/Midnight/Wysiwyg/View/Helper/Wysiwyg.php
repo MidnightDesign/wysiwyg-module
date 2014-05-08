@@ -6,8 +6,17 @@ use Zend\View\Helper\AbstractHelper;
 
 class Wysiwyg extends AbstractHelper
 {
-    function __invoke($text)
+    /**
+     * @var array
+     */
+    private $defaultAttributes = array(
+        'contenteditable' => 'true'
+    );
+
+    function __invoke($text, array $attributes = array())
     {
+        $attributes = $this->defaultAttributes + $attributes;
+
         $view = $this->getView();
         $basePath = $view->plugin('basePath');
 
@@ -18,10 +27,14 @@ class Wysiwyg extends AbstractHelper
         $headLink = $view->plugin('headLink');
         $headLink->appendStylesheet($basePath('midnight/wysiwyg/css/wysiwyg.css'));
 
-        return '<div'
-        . ' contenteditable="true"'
-        . '>'
-        . $text
-        . '</div>';
+        $joinedAttributes = array();
+        foreach ($attributes as $key => $val) {
+            $joinedAttributes[] = $key . '="' . $val . '"';
+        }
+        if (!empty($joinedAttributes)) {
+            $attributesString = ' ' . join(' ', $joinedAttributes);
+        }
+
+        return '<div' . $attributesString . '>' . $text . '</div>';
     }
 }

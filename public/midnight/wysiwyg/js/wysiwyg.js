@@ -14,7 +14,7 @@ $(function () {
         { name: 'Block', element: 'img', attributes: {'class': 'block'} }
     ]);
 
-    $('.wysiwyg').each(function () {
+    $('[contenteditable=true]').each(function () {
         var $element = $(this);
         if (!$element.attr('id')) {
             $element.attr('id', 'wysiwyg-' + Math.round(Math.random() * 100000));

@@ -1,7 +1,8 @@
-.wysiwyg {
+[contenteditable=true] {
     transition: 1s;
     &.dirty {
-        background-color: rgba(255, 255, 0, .05);
+        background-color: rgba(255, 255, 0, .1);
+        outline: solid 1px rgba(0, 0, 0, .1);
         transition: none;
     }
     &.saving {
@@ -13,6 +14,7 @@
         transition: none;
     }
 }
+
 .cke_button__midnightsave {
     .cke_button__midnightsave_icon {
         display: none;

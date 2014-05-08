@@ -11,7 +11,7 @@
                     $editor.addClass('saving');
                     $.ajax($editor.data('save-url'), {
                         type: 'post',
-                        data: { text: editor.getData() },
+                        data: { html: editor.getData() },
                         complete: function() {
                             $editor.removeClass('saving');
                         },
