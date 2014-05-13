@@ -20,7 +20,7 @@ $(function () {
             $element.attr('id', 'wysiwyg-' + Math.round(Math.random() * 100000));
         }
         CKEDITOR.inline($element.attr('id'), {
-            extraPlugins: 'midnightsave,imagebrowser',
+            extraPlugins: 'midnightsave,imagebrowser,image2',
             imageBrowser_listUrl: $element.data('images-url'),
             shiftEnterMode: CKEDITOR.ENTER_BR,
             toolbar: [
