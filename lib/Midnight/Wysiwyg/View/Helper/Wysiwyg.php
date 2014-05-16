@@ -132,7 +132,11 @@ JS;
     private function getStyles()
     {
         $config = $this->getEditorConfig();
-        return $config['styles'];
+        $styles = array();
+        foreach ($config['styles'] as $style) {
+            $styles[] = $style;
+        }
+        return $styles;
     }
 
     private function getToolbar()

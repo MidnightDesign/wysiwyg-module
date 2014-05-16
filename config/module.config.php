@@ -6,10 +6,10 @@ return array(
     'wysiwyg' => array(
         'editor_config' => array(
             'styles' => array(
-                array('name' => 'Page heading', 'element' => 'h1'),
-                array('name' => 'Heading', 'element' => 'h2'),
-                array('name' => 'Minor heading', 'element' => 'h3'),
-                array('name' => 'Paragraph', 'element' => 'p'),
+                'h1' => array('name' => 'Page heading', 'element' => 'h1'),
+                'h2' => array('name' => 'Heading', 'element' => 'h2'),
+                'h3' => array('name' => 'Minor heading', 'element' => 'h3'),
+                'p' => array('name' => 'Paragraph', 'element' => 'p'),
             ),
             'toolbar' => array(
                 array('Styles', 'Bold', 'Italic'),
